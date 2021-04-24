@@ -1,0 +1,92 @@
+@import "../../../styles.scss";
+.container {
+  max-width: 1100px;
+  padding: 20px 30px;
+  margin: 0 auto;
+
+  .about-container {
+    padding: 30px;
+    border: 2px solid $accent-color;
+    border-radius: 20px;
+    .heading {
+      h1 {
+        text-transform: uppercase;
+        text-decoration: underline;
+        font-size: 4.2rem;
+        margin-bottom: 10px;
+      }
+    }
+
+    p {
+      font-size: 1.3rem;
+
+      margin-bottom: 30px;
+    }
+
+    .expertise-heading {
+      h1 {
+        font-size: 3rem;
+        text-transform: uppercase;
+        text-decoration: underline;
+      }
+    }
+
+    .expertise-container {
+      display: grid;
+      gap: 20px;
+      max-width: 800px;
+
+      margin: 0 auto;
+      grid-template-columns: repeat(3, 1fr);
+
+      .expertise {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+
+        img {
+          display: block;
+          height: 200px;
+          width: 200px;
+          margin: 0 auto;
+        }
+
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 100vw;
+    padding: 10px 20px;
+    .about-container {
+      padding: 10px 20px;
+      width: 100%;
+
+      .heading {
+        h1 {
+          font-size: 3rem;
+        }
+      }
+
+      p {
+        margin-bottom: 15px;
+        line-height: 1.2;
+      }
+
+      .expertise-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+@import "../../../styles.scss";
+.container {
+  width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  .contact-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+    text-align: center;
+
+    .header {
+      font-size: 2rem;
+      text-transform: uppercase;
+      border-bottom: 3px solid $accent-color;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 100%;
+    padding: 20px;
+
+    .contact-container {
+      padding: 10px;
+      .header {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
